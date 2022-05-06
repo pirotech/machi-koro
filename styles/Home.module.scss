@@ -1,0 +1,35 @@
+@import 'styles/colors';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: $color-white;
+
+  .gamers {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .gamers {
+    gap: 20px;
+  }
+
+  .gamer {
+    flex: 1 0 auto;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .cards {
+    margin-top: 20px;
+  }
+
+  .bankCards {
+    margin-top: 20px;
+  }
+}

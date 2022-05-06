@@ -1,0 +1,158 @@
+@import 'styles/colors';
+$animation-speed: 0.4s;
+
+.cards {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &:hover {
+    .card {
+      margin-left: 0;
+
+      &__count {
+        left: calc(50% - 15px);
+      }
+
+      &__triggeredBy, &__name, &__tip {
+        text-align: center;
+      }
+    }
+  }
+
+  .card {
+    position: relative;
+    transition: $animation-speed all;
+    margin-left: -75px;
+    min-width: 150px;
+    width: 150px;
+    height: 200px;
+    border-radius: 12px;
+    outline: 4px solid $color-white;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &_blue {
+      background-color: $color-blue-light;
+
+      & .card {
+        &__count {
+          color: $color-blue-lighter;
+          background-color: $color-blue;
+        }
+
+        &__triggeredBy {
+          color: $color-blue-lighter;
+          background-color: $color-blue;
+        }
+      }
+    }
+
+    &_red {
+      background-color: $color-red-light;
+
+      & .card {
+        &__count {
+          color: $color-red-lighter;
+          background-color: $color-red;
+        }
+
+        &__triggeredBy {
+          color: $color-red-lighter;
+          background-color: $color-red;
+        }
+      }
+    }
+
+    &_green {
+      background-color: $color-green-light;
+
+      & .card {
+        &__count {
+          color: $color-green-lighter;
+          background-color: $color-green;
+        }
+
+        &__triggeredBy {
+          color: $color-green-lighter;
+          background-color: $color-green;
+        }
+      }
+    }
+
+    &_violet {
+      background-color: $color-violet-light;
+    }
+
+    &_yellow {
+      background-color: $color-yellow-light;
+    }
+
+    &__count, &__triggeredBy, &__name, &__tip, &__price {
+      margin: 0;
+    }
+
+    &__name, &__tip {
+      transition: $animation-speed all;
+      padding: 0 8px;
+    }
+
+    &__count, &__price {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      line-height: 30px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    &__count {
+      transition: $animation-speed all;
+      top: -15px;
+      left: 8px;
+      border: 2px solid $color-white;
+    }
+
+    &__triggeredBy {
+      display: inline-block;
+      min-width: 100%;
+      padding: 20px 8px 8px;
+      font-weight: 500;
+      border-radius: 12px 12px 0 0;
+      text-align: left;
+    }
+
+    &__name {
+      margin: 8px 0;
+      height: 2.8em;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.01em;
+      color: $color-white;
+    }
+
+    &__tip {
+      display: inline-block;
+      text-align: left;
+    }
+
+    &__price {
+      bottom: 8px;
+      left: 8px;
+      border: 3px solid $color-gold;
+      color: $color-gold-darker;
+      background-color: $color-gold-lighter;
+      box-shadow: 0 0 8px 3px rgba(242, 235, 23, 0.08);
+    }
+  }
+}
